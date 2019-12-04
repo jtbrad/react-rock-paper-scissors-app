@@ -5,7 +5,7 @@ class Shape extends React.Component {
   state = {name: this.props.name};
 
   handleClick = () => {
-    this.props.getUserSelection(this.state.name);
+    this.props.startRound(this.state.name);
   };
 
   render() {
