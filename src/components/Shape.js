@@ -4,9 +4,13 @@ import { Card, } from 'semantic-ui-react';
 class Shape extends React.Component {
   state = {name: this.props.name};
 
+  handleClick = () => {
+    this.props.getUserSelection(this.state.name);
+  };
+
   render() {
     return(
-      <Card>
+      <Card onClick={this.handleClick}>
         <Card.Content>
           <Card.Header>{ this.state.name }</Card.Header>
         </Card.Content>
