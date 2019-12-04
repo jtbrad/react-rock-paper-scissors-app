@@ -1,12 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ShapesMenu from './components/ShapesMenu';
+import { Container, Header } from 'semantic-ui-react';
 
 const App = () => {
   return(
-    <div>
-      Hello World!
-    </div>
+    <Container>
+      <Header>React Rock Paper Scissors</Header>
+      <hr />
+      <ShapesMenu></ShapesMenu>
+    </Container>
   );
 };
 
