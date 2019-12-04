@@ -3,8 +3,10 @@ import Shape from './Shape';
 import { Card, } from 'semantic-ui-react';
 
 const ShapesMenu = () => (
-  <Card.Group>
-    <Shape></Shape>
+  <Card.Group itemsPerRow={3}>
+    <Shape name="Rock"></Shape>
+    <Shape name="Paper"></Shape>
+    <Shape name="Scissors"></Shape>
   </Card.Group>
 );
 
