@@ -1,3 +1,5 @@
+//Have yet to implement the wins/losses talley
+
 import React from 'react';
 import Result from './components/Result';
 import ShapesMenu from './components/ShapesMenu';
@@ -6,7 +8,7 @@ import { Container, Header } from 'semantic-ui-react';
 class App extends React.Component {
   state = {
     computerSelection: "Rock",
-    loses: 0,
+    losses: 0,
     ties: 0, 
     userSelection: "Rock",
     wins: 0,
@@ -29,7 +31,10 @@ class App extends React.Component {
       <Container>
         <Header>React Rock Paper Scissors</Header>
         <hr />
-        <div></div>
+        <div>Statistics</div>
+        <div>Wins: {this.state.wins}</div>
+        <div>Ties: {this.state.ties}</div>
+        <div>Losses: {this.state.losses}</div>
         <ShapesMenu startRound={this.startRound}></ShapesMenu>
         <Result selections={this.state}></Result>
       </Container>
